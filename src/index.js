@@ -9,6 +9,7 @@ import './styles/form.css';
 import reportWebVitals from './reportWebVitals';
 import Login from './components/Login/Login';
 import Dashboard from './components/Dashboard/Dashboard';
+import User from './components/User/User';
 
 const PrivateRoute = ({ children }) => {
   const token = localStorage.getItem('token');
@@ -20,6 +21,7 @@ root.render(
   <BrowserRouter>
   <Routes>
     <Route path="/login" element={<Login />} />
+    <Route path="/user/register" element={<User />} />
     <Route
       path="/dashboard"
       element={

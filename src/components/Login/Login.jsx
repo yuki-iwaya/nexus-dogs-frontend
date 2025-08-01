@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import './Login.css';
 
 const LOGIN_API_URL = process.env.REACT_APP_LOGIN_API_URL || 'http://localhost:8080/api/v1/login';
@@ -145,7 +144,7 @@ const Login = () => {
               <span className="checkmark"></span>
               Remember me
             </label>
-            <a href="#" className="forgot-password">Forgot password?</a>
+            {/* <a href="#" className="forgot-password">Forgot password?</a> */}
           </div>
           
           <button 
@@ -158,7 +157,7 @@ const Login = () => {
         </form>
         
         <div className="login-footer">
-          <p>Don't have an account? <a href="#">Sign up</a></p>
+          <p>Don't have an account? <a href="/user/register">Sign up</a></p>
         </div>
       </div>
     </div>
